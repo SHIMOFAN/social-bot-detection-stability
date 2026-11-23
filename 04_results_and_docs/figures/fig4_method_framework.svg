@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="665" viewBox="0 0 1360 665">
+<defs>
+<marker id="a-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#1B3B6F"/></marker>
+<marker id="a-crimson" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#C0392B"/></marker>
+<marker id="a-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 10 5 L 0 9 z" fill="#7F8C8D"/></marker>
+</defs>
+<rect width="1360" height="665" fill="#FFFFFF"/>
+<text x="680.0" y="32" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="20" font-weight="700" fill="#1B3B6F">方法框架：K=4 局部解冻 + 多头集成 (MH5) + SubBag-ProbVar 子包概率方差训练</text>
+<rect x="15" y="52" width="1330" height="448" rx="10" fill="#FBFCFE" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="35" y="76" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1B3B6F">训练阶段：每个账号的 ≤16 条推文只过编码器 1 次，再复用抽取 8 个子包</text>
+<rect x="30" y="95" width="140" height="195" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="100" y="114" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1E293B">推文池 (≤16 条)</text>
+<rect x="40" y="126" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="72" y="126" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="104" y="126" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="136" y="126" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="40" y="152" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="72" y="152" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="104" y="152" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="136" y="152" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="40" y="178" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="72" y="178" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="104" y="178" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="136" y="178" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="40" y="204" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="72" y="204" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="104" y="204" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<rect x="136" y="204" width="28" height="20" rx="3" fill="#DCE7F5" stroke="#4A7FB5" stroke-width="1"/>
+<text x="100" y="244" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#475569">t₁ … t₁₆</text>
+<text x="100" y="266" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11" font-weight="400" fill="#475569">固定缓存，不额外采集</text>
+<rect x="30" y="425" width="140" height="50" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="100" y="446" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1E293B">账号画像 uᵢ</text>
+<text x="100" y="464" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#475569">392 维特征</text>
+<rect x="205" y="95" width="240" height="300" rx="8" fill="#FFFFFF" stroke="#1B3B6F" stroke-width="1.6"/>
+<text x="325" y="114" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1B3B6F">推文分支 · MiniLM-L12</text>
+<rect x="220" y="125" width="210" height="52" rx="6" fill="#E5E7EB" stroke="#7F8C8D" stroke-width="1.2"/>
+<text x="325" y="146" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#475569">第 1–8 层 · 冻结</text>
+<text x="325" y="164" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11" font-weight="400" fill="#475569">输入隐藏态 fp16 预缓存</text>
+<rect x="220" y="192" width="210" height="75" rx="6" fill="#FBE9E7" stroke="#C0392B" stroke-width="1.8"/>
+<text x="325" y="213" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="13" font-weight="700" fill="#C0392B">第 9–12 层 · 解冻 (K=4)</text>
+<text x="325" y="232" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#C0392B">可训练 · encoder_lr = 2e-5</text>
+<text x="325" y="250" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#C0392B">eval 模式（无 Dropout）</text>
+<rect x="220" y="280" width="210" height="44" rx="6" fill="#EEF3FA" stroke="#4A7FB5" stroke-width="1.2"/>
+<text x="325" y="299" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#1B3B6F">均值池化 + L2 归一化</text>
+<text x="325" y="315" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11" font-weight="400" fill="#475569">eⱼ：384 维单位向量</text>
+<rect x="220" y="337" width="210" height="44" rx="6" fill="#EEF3FA" stroke="#4A7FB5" stroke-width="1.2"/>
+<text x="325" y="356" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#1B3B6F">文本投影 f_text</text>
+<text x="325" y="372" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11" font-weight="400" fill="#475569">384 → 64 维</text>
+<path d="M 325,177 L 325,191" fill="none" stroke="#1B3B6F" stroke-width="1.5" marker-end="url(#a-navy)"/>
+<path d="M 325,267 L 325,279" fill="none" stroke="#1B3B6F" stroke-width="1.5" marker-end="url(#a-navy)"/>
+<path d="M 325,324 L 325,336" fill="none" stroke="#1B3B6F" stroke-width="1.5" marker-end="url(#a-navy)"/>
+<path d="M 170,160 L 188,160 L 188,150 L 219,150" fill="none" stroke="#1B3B6F" stroke-width="1.8" marker-end="url(#a-navy)"/>
+<rect x="220" y="425" width="210" height="50" rx="6" fill="#EEF3FA" stroke="#4A7FB5" stroke-width="1.2"/>
+<text x="325" y="446" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#1B3B6F">画像分支 f_prof</text>
+<text x="325" y="464" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11" font-weight="400" fill="#475569">392 → 64 维</text>
+<path d="M 170,450 L 219,450" fill="none" stroke="#1B3B6F" stroke-width="1.8" marker-end="url(#a-navy)"/>
+<rect x="480" y="95" width="180" height="300" rx="8" fill="#FFFFFF" stroke="#E67E22" stroke-width="1.6"/>
+<text x="570" y="114" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#E67E22">子包采样器</text>
+<text x="570" y="132" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1E293B">无放回抽 S=8 个子包</text>
+<text x="570" y="148" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11" font-weight="400" fill="#475569">每个子包 8 条推文</text>
+<rect x="494" y="162" width="72" height="24" rx="4" fill="#FDEBD3" stroke="#E67E22" stroke-width="1"/>
+<text x="530" y="179" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#9A5A12">子包 V1</text>
+<rect x="574" y="162" width="72" height="24" rx="4" fill="#FDEBD3" stroke="#E67E22" stroke-width="1"/>
+<text x="610" y="179" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#9A5A12">子包 V2</text>
+<rect x="494" y="192" width="72" height="24" rx="4" fill="#FDEBD3" stroke="#E67E22" stroke-width="1"/>
+<text x="530" y="209" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#9A5A12">子包 V3</text>
+<rect x="574" y="192" width="72" height="24" rx="4" fill="#FDEBD3" stroke="#E67E22" stroke-width="1"/>
+<text x="610" y="209" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#9A5A12">子包 V4</text>
+<rect x="494" y="222" width="72" height="24" rx="4" fill="#FDEBD3" stroke="#E67E22" stroke-width="1"/>
+<text x="530" y="239" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#9A5A12">子包 V5</text>
+<rect x="574" y="222" width="72" height="24" rx="4" fill="#FDEBD3" stroke="#E67E22" stroke-width="1"/>
+<text x="610" y="239" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#9A5A12">子包 V6</text>
+<rect x="494" y="252" width="72" height="24" rx="4" fill="#FDEBD3" stroke="#E67E22" stroke-width="1"/>
+<text x="530" y="269" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#9A5A12">子包 V7</text>
+<rect x="574" y="252" width="72" height="24" rx="4" fill="#FDEBD3" stroke="#E67E22" stroke-width="1"/>
+<text x="610" y="269" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#9A5A12">子包 V8</text>
+<rect x="494" y="292" width="152" height="88" rx="6" fill="#FFF8EE" stroke="#E67E22" stroke-width="1"/>
+<text x="570" y="312" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E293B">子包内池化</text>
+<text x="570" y="330" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#475569">均值池化 / SetAttn</text>
+<text x="570" y="348" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#475569">x̄(Vₛ)：64 维</text>
+<text x="570" y="366" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11" font-weight="700" fill="#C0392B">编码零额外开销</text>
+<path d="M 445,359 L 462,359 L 462,215 L 480,215" fill="none" stroke="#1B3B6F" stroke-width="1.8" marker-end="url(#a-navy)"/>
+<path d="M 570,278 L 570,291" fill="none" stroke="#1B3B6F" stroke-width="1.5" marker-end="url(#a-navy)"/>
+<rect x="710" y="95" width="170" height="56" rx="6" fill="#EEF3FA" stroke="#4A7FB5" stroke-width="1.2"/>
+<text x="795" y="117" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#1B3B6F">拼接 [x̄ ; f_prof(u)]</text>
+<text x="795" y="135" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11" font-weight="400" fill="#475569">128 维</text>
+<rect x="710" y="168" width="170" height="175" rx="8" fill="#FFFFFF" stroke="#2E8B8B" stroke-width="1.6"/>
+<text x="795" y="187" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#2E8B8B">MH5：5 个分类头</text>
+<rect x="724" y="197" width="142" height="22" rx="4" fill="#E3F3F3" stroke="#2E8B8B" stroke-width="1"/>
+<text x="795" y="212" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E6B6B">头 h1（独立初始化）</text>
+<rect x="724" y="225" width="142" height="22" rx="4" fill="#E3F3F3" stroke="#2E8B8B" stroke-width="1"/>
+<text x="795" y="240" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E6B6B">头 h2（独立初始化）</text>
+<rect x="724" y="253" width="142" height="22" rx="4" fill="#E3F3F3" stroke="#2E8B8B" stroke-width="1"/>
+<text x="795" y="268" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E6B6B">头 h3（独立初始化）</text>
+<rect x="724" y="281" width="142" height="22" rx="4" fill="#E3F3F3" stroke="#2E8B8B" stroke-width="1"/>
+<text x="795" y="296" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E6B6B">头 h4（独立初始化）</text>
+<rect x="724" y="309" width="142" height="22" rx="4" fill="#E3F3F3" stroke="#2E8B8B" stroke-width="1"/>
+<text x="795" y="324" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E6B6B">头 h5（独立初始化）</text>
+<rect x="710" y="358" width="170" height="44" rx="6" fill="#E3F3F3" stroke="#2E8B8B" stroke-width="1.2"/>
+<text x="795" y="377" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E6B6B">σ 后取平均</text>
+<text x="795" y="393" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11" font-weight="400" fill="#475569">p_ens(Vₛ)</text>
+<path d="M 660,336 L 672,336 L 672,108 L 710,108" fill="none" stroke="#1B3B6F" stroke-width="1.8" marker-end="url(#a-navy)"/>
+<path d="M 430,450 L 689,450 L 689,138 L 710,138" fill="none" stroke="#1B3B6F" stroke-width="1.8" marker-end="url(#a-navy)"/>
+<path d="M 795,151 L 795,167" fill="none" stroke="#1B3B6F" stroke-width="1.5" marker-end="url(#a-navy)"/>
+<path d="M 795,343 L 795,357" fill="none" stroke="#1B3B6F" stroke-width="1.5" marker-end="url(#a-navy)"/>
+<rect x="920" y="95" width="395" height="300" rx="8" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.6"/>
+<text x="1117" y="114" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#C0392B">训练目标（类比 R-Drop 的一致性约束，但扰动来自推文子包）</text>
+<rect x="938" y="128" width="40" height="24" rx="4" fill="#FDECEA" stroke="#C0392B" stroke-width="1"/>
+<text x="958" y="145" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#C0392B">p1</text>
+<rect x="984" y="128" width="40" height="24" rx="4" fill="#FDECEA" stroke="#C0392B" stroke-width="1"/>
+<text x="1004" y="145" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#C0392B">p2</text>
+<rect x="1030" y="128" width="40" height="24" rx="4" fill="#FDECEA" stroke="#C0392B" stroke-width="1"/>
+<text x="1050" y="145" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#C0392B">p3</text>
+<rect x="1076" y="128" width="40" height="24" rx="4" fill="#FDECEA" stroke="#C0392B" stroke-width="1"/>
+<text x="1096" y="145" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#C0392B">p4</text>
+<rect x="1122" y="128" width="40" height="24" rx="4" fill="#FDECEA" stroke="#C0392B" stroke-width="1"/>
+<text x="1142" y="145" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#C0392B">p5</text>
+<rect x="1168" y="128" width="40" height="24" rx="4" fill="#FDECEA" stroke="#C0392B" stroke-width="1"/>
+<text x="1188" y="145" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#C0392B">p6</text>
+<rect x="1214" y="128" width="40" height="24" rx="4" fill="#FDECEA" stroke="#C0392B" stroke-width="1"/>
+<text x="1234" y="145" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#C0392B">p7</text>
+<rect x="1260" y="128" width="40" height="24" rx="4" fill="#FDECEA" stroke="#C0392B" stroke-width="1"/>
+<text x="1280" y="145" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#C0392B">p8</text>
+<path d="M 938,168 L 1296,168" fill="none" stroke="#C0392B" stroke-width="2" marker-end="url(#a-crimson)" marker-start="url(#a-crimson)"/>
+<text x="1117" y="187" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#C0392B">最小化 8 个子包概率的方差  4·Var(p_ens)</text>
+<rect x="938" y="202" width="359" height="108" rx="6" fill="#FFF5F4" stroke="#C0392B" stroke-width="1"/>
+<text x="1117" y="224" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1E293B">L = L_BCE + λ_var · 4·Var(p_ens) + λ_ac · L_anti-collapse</text>
+<text x="1117" y="246" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#475569">L_BCE：5 头 × 8 子包逐一计算，pos_weight 平衡类别</text>
+<text x="1117" y="266" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#475569">λ_var = 1.5（边界敏感，p≈0.5 处梯度最大）</text>
+<text x="1117" y="286" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#475569">λ_ac = 0.1（防止推文增量塌缩） · CVaR 权重 = 0</text>
+<rect x="938" y="324" width="359" height="56" rx="6" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+<text x="1117" y="346" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#1B3B6F">只更新：第 9–12 层 + f_text / f_prof + 5 个分类头</text>
+<text x="1117" y="366" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#475569">第 1–8 层与缓存隐藏态保持不变</text>
+<path d="M 880,380 L 900,380 L 900,215 L 920,215" fill="none" stroke="#1B3B6F" stroke-width="1.8" marker-end="url(#a-navy)"/>
+<path d="M 1117,395 L 1117,412 L 325,412 L 325,397" fill="none" stroke="#C0392B" stroke-width="1.5" marker-end="url(#a-crimson)" stroke-dasharray="6,4"/>
+<text x="790" y="430" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#C0392B">反向传播</text>
+<rect x="15" y="512" width="1330" height="108" rx="10" fill="#F4F9F6" stroke="#2E8B8B" stroke-width="1.4" stroke-dasharray="7,4"/>
+<rect x="30" y="540" width="150" height="40" rx="20" fill="#2E8B8B"/>
+<text x="105" y="565" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF">推理（部署）</text>
+<rect x="205" y="534" width="192" height="52" rx="6" fill="#FFFFFF" stroke="#2E8B8B" stroke-width="1.4"/>
+<text x="301" y="556" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E6B6B">账号：固定 8 条推文</text>
+<text x="301" y="574" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11" font-weight="400" fill="#475569">单视图，无社交图</text>
+<path d="M 398,560 L 428,560" fill="none" stroke="#7F8C8D" stroke-width="1.6" marker-end="url(#a-gray)"/>
+<rect x="429" y="534" width="192" height="52" rx="6" fill="#FFFFFF" stroke="#2E8B8B" stroke-width="1.4"/>
+<text x="525" y="556" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E6B6B">MiniLM（K=4 微调权重）</text>
+<text x="525" y="574" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11" font-weight="400" fill="#475569">每条推文编码 1 次</text>
+<path d="M 622,560 L 652,560" fill="none" stroke="#7F8C8D" stroke-width="1.6" marker-end="url(#a-gray)"/>
+<rect x="653" y="534" width="192" height="52" rx="6" fill="#FFFFFF" stroke="#2E8B8B" stroke-width="1.4"/>
+<text x="749" y="556" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E6B6B">均值池化 → f_text ⊕ f_prof</text>
+<text x="749" y="574" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11" font-weight="400" fill="#475569">128 维账号表示</text>
+<path d="M 846,560 L 876,560" fill="none" stroke="#7F8C8D" stroke-width="1.6" marker-end="url(#a-gray)"/>
+<rect x="877" y="534" width="192" height="52" rx="6" fill="#FFFFFF" stroke="#2E8B8B" stroke-width="1.4"/>
+<text x="973" y="556" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E6B6B">MH5 → p_ens</text>
+<text x="973" y="574" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11" font-weight="400" fill="#475569">5 头概率平均</text>
+<path d="M 1070,560 L 1100,560" fill="none" stroke="#7F8C8D" stroke-width="1.6" marker-end="url(#a-gray)"/>
+<rect x="1101" y="534" width="192" height="52" rx="6" fill="#FFFFFF" stroke="#2E8B8B" stroke-width="1.4"/>
+<text x="1197" y="556" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#1E6B6B">p_ens ≥ τ → Bot / Human</text>
+<text x="1197" y="574" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11" font-weight="400" fill="#475569">阈值 τ 在 cal 集校准</text>
+<text x="680.0" y="608" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#475569">评测：同一账号抽 30 个 8 推文视图 × 5 个训练种子，统计 Churn（预测翻转率）与稳定误差；官方 test 集不使用</text>
+<rect x="330" y="634" width="700" height="24" rx="12" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+<rect x="350" y="640" width="14" height="12" rx="2" fill="#E5E7EB" stroke="#7F8C8D" stroke-width="1.2"/>
+<text x="370" y="650" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#475569">冻结层</text>
+<rect x="450" y="640" width="14" height="12" rx="2" fill="#FBE9E7" stroke="#C0392B" stroke-width="1.2"/>
+<text x="470" y="650" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#C0392B">解冻可训练层 (K=4)</text>
+<rect x="630" y="640" width="14" height="12" rx="2" fill="#FDEBD3" stroke="#E67E22" stroke-width="1.2"/>
+<text x="650" y="650" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#9A5A12">子包采样</text>
+<rect x="750" y="640" width="14" height="12" rx="2" fill="#E3F3F3" stroke="#2E8B8B" stroke-width="1.2"/>
+<text x="770" y="650" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E6B6B">多头集成</text>
+<line x1="870" y1="646" x2="896" y2="646" stroke="#C0392B" stroke-width="1.5" stroke-dasharray="6,4"/>
+<text x="904" y="650" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, SimHei, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#C0392B">梯度回传</text>
+</svg>

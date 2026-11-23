@@ -1,0 +1,1 @@
+{"extends":"../../../configs/experiments/partial_unfreeze_kl.yaml","name":"MH5-SetAttn-Clean","output_root":"work/antigravity_robust_mh5/runs","heads":5,"arch":"setattn","subbags":8,"cvar_alpha":0.0,"cvar_temp":1.0,"var_temperature":1.0,"lambda_prob_var":0.8,"lambda_anticollapse":0.1,"target_inc_std":1.75,"attn_temp":0.5,"lambda_attn_ent":0.05,"resource_reviewed":true}

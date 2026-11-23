@@ -1,0 +1,1 @@
+{"extends":"common.yaml","name":"EXP-4","dynamic":true,"train_views":2,"unfreeze_layers":1,"consistency":"logit_kl"}

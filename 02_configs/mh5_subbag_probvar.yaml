@@ -1,0 +1,1 @@
+{"extends":"../../../configs/experiments/partial_unfreeze_kl.yaml","name":"MH5-SubBag-ProbVar","output_root":"work/antigravity_robust_mh5/runs","heads":5,"arch":"standard","subbags":8,"cvar_alpha":0.3,"cvar_temp":1.0,"var_temperature":1.0,"lambda_prob_var":2.0,"lambda_anticollapse":0.05,"target_inc_std":1.7,"resource_reviewed":true}

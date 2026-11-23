@@ -1,0 +1,1 @@
+{"extends":"../../../configs/experiments/partial_unfreeze_kl.yaml","name":"K4-MH5-KL01","output_root":"work/antigravity_robust_mh5/runs","prefix_cache":"work/antigravity_robust_mh5/cache_k4","unfreeze_layers":4,"objective_type":"mh5_kl","heads":5,"arch":"standard","resource_reviewed":true}

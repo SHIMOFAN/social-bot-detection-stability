@@ -1,0 +1,19 @@
+{
+  "name": "common", "output_root": "results/experiments_v1",
+  "data_path": "outputs/twibot20_local_train_v1",
+  "prefix_cache": "outputs/twibot20_last_layer_20261117/cache",
+  "initialization": "outputs/twibot20_last_layer_20261117",
+  "sampling_library": "results/sampling_stability/dev_30_views.npz",
+  "budget": 8, "sampling_seed": 20261118, "cpu_threads": 4,
+  "sentence_microbatch": 96, "batch": 32,
+  "unfreeze_layers": 0, "head_lr": 0.0003, "encoder_lr": 0.00002,
+  "optimizer": "AdamW", "weight_decay": 0.0001, "temperature": 1.0,
+  "lambda_cons": 0.1, "consistency": "none", "gradient_projection": false,
+  "heads": 1, "train_views": 1, "dynamic": false, "train": true,
+  "resource_reviewed": false, "runnable": true,
+  "stages": {
+    "smoke": {"fit_limit": 64, "cal_limit": 32, "eval_limit": 32, "epochs": 1, "views": 3, "seeds": [42,43]},
+    "pilot": {"fit_limit": 256, "cal_limit": 128, "eval_limit": 128, "epochs": 2, "views": 5, "seeds": [42,43]},
+    "full": {"fit_limit": null, "cal_limit": null, "eval_limit": null, "epochs": 3, "views": 30, "seeds": [42,43,44,45,46]}
+  }
+}
